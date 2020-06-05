@@ -1,0 +1,15 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Ebrima';
+  src: local('Ebrima'), url(../fonts/ebrima/EBRIMA.TTF) format('ttf');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('Ubuntu'), url(../fonts/ubuntu/Ubuntu-Medium.ttf) format('ttf');
+}
