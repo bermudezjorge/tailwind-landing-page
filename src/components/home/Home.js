@@ -3,9 +3,9 @@ import React from 'react'
 import Header from './Header'
 import HomeSection from './HomeSection'
 
-import BannerBackground from '../../assets/imgs/fondo_banner.png'
+import BannerBackground from '../../assets/img/fondo_banner.png'
 
-function Home() {
+export default function Home() {
 
   const homeStyle = {
     backgroundImage: `url(${BannerBackground})`,
@@ -19,5 +19,3 @@ function Home() {
     </div>
   )
 }
-
-export default Home

@@ -1,11 +1,9 @@
 import React from "react"
 
-function NavLink({ text }) {
+export default function NavLink({ text }) {
   return (
-    <p className="text-white font-serif">
+    <p className="text-white cursor-pointer box-content font-serif hover:font-black duration-100 transition-all transform hover:translate-y-1">
       {text}
     </p>
   )
 }
-
-export default NavLink

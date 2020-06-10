@@ -2,9 +2,9 @@ import React from 'react'
 
 import Nav from './Nav'
 
-import Logo from '../../assets/imgs/logo.png'
+import Logo from '../../assets/img/logo.png'
 
-function Header() {
+export default function Header() {
   return (
     <div className="flex w-5/6 m-auto p-10">
       <div className="w-1/6">
@@ -16,5 +16,3 @@ function Header() {
     </div>
   )
 }
-
-export default Header
