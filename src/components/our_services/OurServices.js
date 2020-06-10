@@ -7,10 +7,6 @@ import CouchImg from '../../assets/img/mueble.png'
 
 export default function OurServices() {
 
-  const customColor = {
-    color: '#790acd'
-  }
-
   const SERVICES = [
     'Limpieza y Desinfección COVID del hogar y oficinas.',
     'Limpieza y Desinfección COVID de coches.',
