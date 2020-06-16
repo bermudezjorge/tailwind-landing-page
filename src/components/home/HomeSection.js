@@ -3,7 +3,7 @@ import React from 'react'
 import Title from '../global/Title'
 import Description from '../global/Description'
 import Button from '../global/Button'
-import HomeSectionImg from '../../assets/imgs/img_foto_banner.png'
+import HomeSectionImg from '../../assets/img/img_foto_banner.png'
 
 export default function HomeSection() {
   return (
