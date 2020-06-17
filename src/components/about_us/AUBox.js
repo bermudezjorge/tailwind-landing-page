@@ -15,7 +15,7 @@ export default function AUBox({ boxData }) {
 
   return (
     <div className="w-full h-64 bg-white flex flex-col items-center py-10 hover:shadow-lg" style={AUBOXstyle}>
-      <img src={icon} alt="icono descriptivo sobre nosotros"/>
+      <img className="w-20" src={icon} alt="icono descriptivo sobre nosotros"/>
 
       <h1 className="mt-3 text-xl font-sans font-black" style={AUBOXtextColor}>{title}</h1>
       <p className="w-56 text-center font-serif" style={AUBOXtextColor}>{description}</p>

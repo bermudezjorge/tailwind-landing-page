@@ -3,7 +3,7 @@ import React from 'react'
 import { Formik, useField, Form } from 'formik'
 import * as yup from 'yup'
 
-import distritos from './ubigeo_peru_2016_distritos'
+import distritos from './distritos'
 
 import Button from '../global/Button'
 
@@ -69,6 +69,8 @@ const CustomSelect = ({ label, ...props }) => {
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
+const services = ['Limpieza y Desinfección COVID del hogar y oficinas', 'Limpieza y Desinfección COVID de coches', 'Lavado de muebles', 'Lavado de alfombras', 'Lavado de colchones']
+
 export default function Contact() {
   return (
     <div>
@@ -87,7 +89,7 @@ export default function Contact() {
             .max(30, 'Su nombre es muy largo')
             .required('Requerido'),
           services: yup.string()
-          .oneOf(['Limpieza y Desinfección COVID del hogar y oficinas', 'Limpieza y Desinfección COVID de coches', 'Lavado de muebles', 'Lavado de alfombras', 'Lavado de colchones'], 'Servicio invalido')
+          .oneOf(services, 'Servicio invalido')
           .required('Requerido'),
           message: yup.string()
           .min(20, 'Su mensaje es muy corto')
@@ -101,7 +103,7 @@ export default function Contact() {
             .email('Email invalido.')
             .required('Requerido'),
           district: yup.string()
-          .oneOf(['Limpieza y Desinfección COVID del hogar y oficinas', 'Limpieza y Desinfección COVID de coches', 'Lavado de muebles', 'Lavado de alfombras', 'Lavado de colchones'], 'Distrito invalido')
+          .oneOf(distritos, 'Distrito invalido')
           .required('Requerido'),
           acceptedTerms:  yup.boolean()
             .required('Requerido')
@@ -135,12 +137,9 @@ export default function Contact() {
                 <CustomTextInput label="Email" name="email" type="email" placeholder="Ingrese E-mail"/>
                 <CustomSelect label="Distrito" name="district">
                   <option>Seleccione Distrito</option>
-                  {/* {distritos.map(({ id, name }) => (
-                    <option key={id} value={name}>{name}</option>
-                  ))} */}
-                  <option value="Lavado de muebles">Lavado de muebles</option>
-                  <option value="Lavado de alfombras">Lavado de alfombras</option>
-                  <option value="Lavado de colchones">Lavado de colchones</option>
+                  {distritos.map((distrito, i) => (
+                    <option key={i} value={distrito}>{distrito}</option>
+                  ))}
                 </CustomSelect>
                 <CustomCheckbox name="acceptedTerms">
                   Acepto los Términos y condiciones

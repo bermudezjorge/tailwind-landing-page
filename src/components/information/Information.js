@@ -34,7 +34,7 @@ export default function Information() {
   ]
 
   return (
-    <div className="w-5/6 flex flex-col m-auto p-10">
+    <div id="somos-los-mejores" className="w-5/6 flex flex-col m-auto p-10">
       <div className="w-1/2 m-auto text-center">
         <Title color="purple" text="Somos la MEJOR OPCIÓN para tu HOGAR u OFICINA"/>
       </div>

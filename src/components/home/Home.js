@@ -13,7 +13,7 @@ export default function Home() {
   }
 
   return (
-    <div className="w-full bg-cover bg-no-repeat" style={homeStyle}>
+    <div id="home" className="w-full bg-cover bg-no-repeat" style={homeStyle}>
       <Header />
       <HomeSection />
     </div>
