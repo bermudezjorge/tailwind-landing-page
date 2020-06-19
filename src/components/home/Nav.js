@@ -14,7 +14,7 @@ export default function Nav() {
   ]
 
   return (
-    <div className="h-full flex flex-row-reverse space-x-8 space-x-reverse items-center">
+    <div className="h-full hidden md:flex flex-row-reverse space-x-8 space-x-reverse items-center">
       <div className="flex space-x-2">
         <a href="https://www.facebook.com/CleansedHome" target="_blank" rel="noopener noreferrer">
           <img className="transform hover:scale-90" src={fbIcon} alt="icon"/>

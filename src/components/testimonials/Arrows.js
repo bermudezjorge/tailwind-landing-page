@@ -5,7 +5,9 @@ export default function Arrows({ direction, disabled, changeSlide }) {
   const directionClass = direction === '>' ? 'transform rotate-180' : null
 
   const verticalPosition = { top: '12%'}
-  const hPos = '12%'
+  let hPos = '12%'
+
+  document.body.clientWidth >= 768 ? hPos = '12%' : hPos = '3%'
   const horizontalPosition = direction === '>' ? { right: hPos } : { left: hPos }
   const position = {...verticalPosition, ...horizontalPosition}
 

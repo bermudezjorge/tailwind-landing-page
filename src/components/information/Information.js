@@ -34,12 +34,12 @@ export default function Information() {
   ]
 
   return (
-    <div id="somos-los-mejores" className="w-5/6 flex flex-col m-auto p-10">
-      <div className="w-1/2 m-auto text-center">
+    <div id="somos-los-mejores" className="w-5/6 flex flex-col m-auto pt-5 md:p-10 mt-5 md:mt-0">
+      <div className="w-full md:w-1/2 m-auto text-center">
         <Title color="purple" text="Somos la MEJOR OPCIÓN para tu HOGAR u OFICINA"/>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 row-gap-8 md:gap-4 mt-12">
         {IMFORMATION_DETAILED.map(info => (
           <InformationDetailed key={info.title} {...info} />
         ))}

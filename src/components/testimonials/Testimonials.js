@@ -23,7 +23,7 @@ export default function Testimonials() {
   ]
 
   return (
-    <div id="testimonios" className="w-5/6 m-auto p-10">
+    <div id="testimonios" className="w-full md:w-5/6 m-auto pt-5 md:p-10 mt-12 md:mt-0">
       <Title classes="text-center" color="purple" text="Lo que dicen de NOSOTROS"/>
 
       <TinySlider
