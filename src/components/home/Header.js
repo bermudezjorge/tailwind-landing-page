@@ -10,7 +10,7 @@ export default function Header() {
       <div className="w-3/6 md:w-1/6">
         <img className="mr-auto" src={Logo} alt="Logo"/>
       </div>
-      <div className="w-5/6">
+      <div className="w-5/6 relative z-10">
         <Nav />
       </div>
     </div>

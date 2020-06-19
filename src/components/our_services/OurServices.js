@@ -16,12 +16,12 @@ export default function OurServices() {
   ]
 
   return (
-    <div className="w-5/6 flex m-auto pt-5 md:p-10">
+    <div className="w-5/6 flex m-auto pt-5 md:p-10 mt-10 md:mt-0">
       <div className="w-1/2 hidden md:block">
         <img src={CouchImg} alt="Sofa"/>
       </div>
 
-      <div className="w-full md:w-1/2 flex flex-col justify-center md:ml-12 mt-40 md:mt-0">
+      <div className="w-full md:w-1/2 flex flex-col justify-center md:ml-12">
         <Title color="purple" text="Nuestros SERVICIOS"/>
         <Description classes="mb-6" text="Contamos con los mejores profesionales, garantizando a nuestros clientes y a todos los usuarios ambientes de trabajo limpios y agradables."/>
 

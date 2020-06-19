@@ -16,7 +16,7 @@ const CustomTextInput = ({ label, ...props }) => {
   return (
     <>
       <label className={labelClasses} htmlFor={props.id || props.name}>{label}</label>
-      <input className="border-2 divide-white rounded-md px-5 bg-transparent text-white p-1 placeholder-white my-1" {...field} {...props}/>
+      <input className="border-2 border-white rounded-md px-5 bg-transparent text-white p-1 placeholder-white my-1" {...field} {...props}/>
       {meta.touched && meta.error ? (
         <div className={errorClasses}>{meta.error}</div>
       ) : null}
@@ -29,7 +29,7 @@ const CustomTextArea = ({ label, ...props }) => {
   return (
     <>
       <label className={labelClasses} htmlFor={props.id || props.name}>{label}</label>
-      <textarea className="border-2 divide-white rounded-md px-5 bg-transparent text-white my-1" {...field} {...props}></textarea>
+      <textarea className="border-2 border-white rounded-md px-5 bg-transparent text-white placeholder-white my-1" {...field} {...props}></textarea>
       {meta.touched && meta.error ? (
         <div className={errorClasses}>{meta.error}</div>
       ) : null}
@@ -118,9 +118,9 @@ export default function Contact() {
         }}
       >
         {props => (
-          <Form className="w-5/6 m-auto p-10 flex flex-col items-center">
-            <div className="w-full flex space-x-12">
-              <div className="w-1/2 inline-flex flex-col">
+          <Form className="w-full md:w-5/6 m-auto p-5 md:p-10 flex flex-col items-end md:items-center">
+            <div className="w-full flex flex-col md:flex-row md:space-x-12">
+              <div className="w-full md:w-1/2 inline-flex flex-col">
                   <CustomTextInput label="Name" name="name" type="text" placeholder="Ingrese nombre"/>
                   <CustomSelect label="Servicios" name="services">
                     <option>Seleccione Servicio</option>
@@ -132,7 +132,7 @@ export default function Contact() {
                   </CustomSelect>
                   <CustomTextArea label="Mensaje" name="message" placeholder="Mensaje"/>
               </div>
-              <div className="w-1/2 inline-flex flex-col">
+              <div className="w-full md:w-1/2 inline-flex flex-col">
                 <CustomTextInput label="Celular" name="phoneNumber" type="string" placeholder="Ingrese Celular"/>
                 <CustomTextInput label="Email" name="email" type="email" placeholder="Ingrese E-mail"/>
                 <CustomSelect label="Distrito" name="district">

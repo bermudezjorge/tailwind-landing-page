@@ -10,7 +10,7 @@ const ContactGrandient = {
 
 export default function Contact() {
   return (
-    <div id="contactenos" className="w-full p-12" style={ContactGrandient}>
+    <div id="contactenos" className="w-full p-5 md:p-12" style={ContactGrandient}>
       <Title classes="text-center" color="white" text="Ponte en CONTACTO" />
       <ContactForm />
       <ContactFooter />
