@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './assets/css/main.css'
+import './assets/css/scrolling.css'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
