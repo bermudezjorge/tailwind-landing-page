@@ -54,12 +54,12 @@ const CustomCheckbox = ({ children, ...props }) => {
 }
 
 const CustomSelect = ({ label, ...props }) => {
-  const [field, meta] = useField(props, 'checkbox')
+  const [field, meta] = useField(props)
 
   return (
     <>
       <label className={labelClasses} htmlFor={props.id || props.name}>{label}</label>
-      <select className="border-2 divide-white rounded-md p-1 px-5 bg-transparent text-white my-1" {...field} {...props}/>
+      <select className="border-2 border-white rounded-md p-2 px-5 bg-transparent text-white my-1" {...field} {...props}/>
       {meta.touched && meta.error ? (
         <div className={errorClasses}>{meta.error}</div>
       ) : null}
@@ -70,6 +70,8 @@ const CustomSelect = ({ label, ...props }) => {
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 const services = ['Limpieza y Desinfección COVID del hogar y oficinas', 'Limpieza y Desinfección COVID de coches', 'Lavado de muebles', 'Lavado de alfombras', 'Lavado de colchones']
+
+const optionColor = { color: '#2b6cb0', border: 'none' }
 
 export default function Contact() {
   return (
@@ -121,14 +123,12 @@ export default function Contact() {
           <Form className="w-full md:w-5/6 m-auto p-5 md:p-10 flex flex-col items-end md:items-center">
             <div className="w-full flex flex-col md:flex-row md:space-x-12">
               <div className="w-full md:w-1/2 inline-flex flex-col">
-                  <CustomTextInput label="Name" name="name" type="text" placeholder="Ingrese nombre"/>
+                  <CustomTextInput label="Nombre" name="name" type="text" placeholder="Ingrese nombre"/>
                   <CustomSelect label="Servicios" name="services">
-                    <option>Seleccione Servicio</option>
-                    <option value="Limpieza y Desinfección COVID del hogar y oficinas">Limpieza y Desinfección COVID del hogar y oficinas</option>
-                    <option value="Limpieza y Desinfección COVID de coches">Limpieza y Desinfección COVID de coches</option>
-                    <option value="Lavado de muebles">Lavado de muebles</option>
-                    <option value="Lavado de alfombras">Lavado de alfombras</option>
-                    <option value="Lavado de colchones">Lavado de colchones</option>
+                  <option style={optionColor}>Seleccione Servicio</option>
+                    {services.map((service, i) => (
+                      <option key={i} value={service} style={optionColor}>{service}</option>
+                    ))}
                   </CustomSelect>
                   <CustomTextArea label="Mensaje" name="message" placeholder="Mensaje"/>
               </div>
@@ -136,9 +136,9 @@ export default function Contact() {
                 <CustomTextInput label="Celular" name="phoneNumber" type="string" placeholder="Ingrese Celular"/>
                 <CustomTextInput label="Email" name="email" type="email" placeholder="Ingrese E-mail"/>
                 <CustomSelect label="Distrito" name="district">
-                  <option>Seleccione Distrito</option>
+                  <option style={optionColor}>Seleccione Distrito</option>
                   {distritos.map((distrito, i) => (
-                    <option key={i} value={distrito}>{distrito}</option>
+                    <option key={i} value={distrito} style={optionColor}>{distrito}</option>
                   ))}
                 </CustomSelect>
                 <CustomCheckbox name="acceptedTerms">

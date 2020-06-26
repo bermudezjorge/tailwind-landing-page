@@ -23,7 +23,7 @@ export default function ContactFooter() {
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="font-serif text-center md:text-left text-white mb-2 mt-12 :mt-0">Visita nuestras redes sociales</p>
+        <p className="font-serif text-center md:text-left text-white mb-2 mt-12 md:mt-0">Visita nuestras redes sociales</p>
         <div className="flex justify-center space-x-5">
           <a href="https://www.facebook.com/CleansedHome" target="_blank" rel="noopener noreferrer">
             <img className="transform hover:scale-90" src={fbIcon} alt="icon"/>

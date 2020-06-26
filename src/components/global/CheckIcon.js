@@ -10,8 +10,8 @@ export default function CheckIcon() {
   }
   
   return (
-    <i className="rounded-full text-white mr-3" style={CheckIconStyle}>
+    <span className="rounded-full text-white mr-3" style={CheckIconStyle}>
       &#10004;
-    </i>
+    </span>
   )
 }

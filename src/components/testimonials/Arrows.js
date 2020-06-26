@@ -11,7 +11,7 @@ export default function Arrows({ direction, disabled, changeSlide }) {
   const horizontalPosition = direction === '>' ? { right: hPos } : { left: hPos }
   const position = {...verticalPosition, ...horizontalPosition}
 
-  const buttonActive = disabled ? 'cursor-default' : 'hover:bg-blue-100 cursor-pointer'
+  const buttonActive = disabled ? 'cursor-default' : 'cursor-pointer'
   const lineColor = disabled ? 'bg-blue-300' : 'bg-blue-500'
   
   return (
